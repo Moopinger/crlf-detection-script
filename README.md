@@ -6,5 +6,6 @@ See the moopinger blog for more information [https://moopinger.github.io/blog/cr
 ```
 git clone https://github.com/moopinger/crlf-detection-script.git
 pip install -r requirements.txt
+cd crlf-detection-script
 python crlf.py
 ```
