@@ -4,7 +4,7 @@ See the moopinger blog for more information [https://moopinger.github.io/blog/cr
 # Install
 
 ```
-git clone https://github.com/Moopinger/crlf-detection-script.git
+git clone https://github.com/moopinger/crlf-detection-script.git
 pip install -r requirements.txt
 python crlf.py
 ```
