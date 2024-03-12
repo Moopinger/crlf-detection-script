@@ -2,7 +2,6 @@ import httpx
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from httpx import RequestError
 
-# Suppress only the single warning from urllib3 needed.
 
 # Read hosts from file
 with open('hosts.txt', 'r') as file:
@@ -21,7 +20,7 @@ for host in hosts:
     url = f'https://{host}/%20HTTP/9%0D%0ATransfer-Encoding:%20nonexistant%0D%0Ax-end:%20a'
     try:
         with httpx.Client(http2=True, verify=False) as client:
-            response = client.get(url, headers=headers, timeout=4, follow_redirects=False)  # Ignore SSL certificate verification
+            response = client.get(url, headers=headers, timeout=4, follow_redirects=False)  
 
         if response.status_code == 505 or response.status_code == 501:
             # Add host to success list and write to file
