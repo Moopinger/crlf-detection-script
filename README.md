@@ -9,3 +9,10 @@ cd crlf-detection-script
 pip install -r requirements.txt
 python crlf.py
 ```
+
+Thanks [@thefisherman2103](https://github.com/thefisherman2103) for the following:
+
+If you try to run it with Python 3.9 than you'll get error such as
+ImportError: Using http2=True, but the 'h2' package is not installed. Make sure to install httpx using pip install httpx[http2].
+
+pip install 'httpx[http2]' solve it.
